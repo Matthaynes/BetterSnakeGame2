@@ -74,3 +74,40 @@ footer {
 footer a:visited {
   color: inherit;
 }
+.container, button{
+    background: linear-gradient(138deg, #00e6ab, #e60c00);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 2s ease infinite;
+    -moz-animation: Gradient 2s ease infinite;
+    -o-animation: Gradient 2s ease infinite;
+    animation: Gradient 2s ease infinite;
+  
+}
+@-webkit-keyframes Gradient {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-moz-keyframes Gradient {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-o-keyframes Gradient {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@keyframes Gradient {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+button{
+  border-radius: 20em;
+  border-width: 1px;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  display: none;
+}
