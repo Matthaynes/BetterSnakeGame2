@@ -7,11 +7,12 @@ let gameOver = false
 const gameBoard = document.getElementById('game-board')
 
 function main(currentTime) {
+  console.log(gameOver);
   if (gameOver === true) {
     document.getElementById('button').style.display = "block";
-    
+  
   }
-  return
+  // return
 }
 
 

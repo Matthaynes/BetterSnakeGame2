@@ -8,6 +8,8 @@ export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
+    var audio = new Audio('pop-39222.mp3');
+    audio.play();
   }
 }
 

@@ -219,6 +219,8 @@ window.addEventListener("DOMContentLoaded", function(event) {
         if (headPosition == applePosition) {
           // Increase score
           score++;
+          var audio = new Audio('pop-39222.mp3');
+          audio.play();
           scoreElement.innerText = hardMode ? `H ${score}` : score;
 
           // Generate another apple
@@ -261,7 +263,8 @@ window.addEventListener("DOMContentLoaded", function(event) {
       const changeMode = hardMode
         ? "Back to easy mode? Press the letter E."
         : "Ready for hard more? Press the letter H.";
-      noteElement.innerHTML = `${error.message}. ${pressSpaceToStart} <div>${changeMode}</div> ${followMe}`;
+ var audio = new Audio('failure-1-89170.mp3');
+      audio.play();
       noteElement.style.opacity = 1;
       containerElement.style.opacity = 1;
     }
