@@ -1,4 +1,4 @@
-
+var audio = new Audio('pop-39222.mp3');
 window.addEventListener("DOMContentLoaded", function(event) {
   window.focus(); // Capture keys right away (by default focus is on editor)
 
@@ -131,7 +131,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
       hardMode = true;
       fadeSpeed = 4000;
       fadeExponential = 1.025;
-      noteElement.innerHTML = `Hard mode. Press space to start!`;
+      noteElement.innerHTML = `Hard mode. Press space to start! If you want to go back to Easy Mode press E.`;
       noteElement.style.opacity = 1;
       resetGame();
       return;
@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
       hardMode = false;
       fadeSpeed = 5000;
       fadeExponential = 1.024;
-      noteElement.innerHTML = `Easy mode. Press space to start!`;
+      noteElement.innerHTML = `Easy mode. Press space to start! If you want to go to Hard Mode press H.`;
       noteElement.style.opacity = 1;
       resetGame();
       return;
@@ -220,6 +220,9 @@ window.addEventListener("DOMContentLoaded", function(event) {
           // Increase score
           score++;
           var audio = new Audio('pop-39222.mp3');
+          setTimeout(() => {
+  console.log("Delayed for 1 second.");
+}, 0)
           audio.play();
           scoreElement.innerText = hardMode ? `H ${score}` : score;
 
@@ -263,7 +266,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
       const changeMode = hardMode
         ? "Back to easy mode? Press the letter E."
         : "Ready for hard more? Press the letter H.";
- var audio = new Audio('failure-1-89170.mp3');
+      var audio = new Audio('failure-1-89170.mp3');
       audio.play();
       noteElement.style.opacity = 1;
       containerElement.style.opacity = 1;
