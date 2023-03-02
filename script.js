@@ -1,4 +1,3 @@
-var audio = new Audio('pop-39222.mp3');
 window.addEventListener("DOMContentLoaded", function(event) {
   window.focus(); // Capture keys right away (by default focus is on editor)
 
@@ -221,8 +220,8 @@ window.addEventListener("DOMContentLoaded", function(event) {
           score++;
           var audio = new Audio('pop-39222.mp3');
           setTimeout(() => {
-  console.log("Delayed for 1 second.");
-}, 0)
+            console.log("Delayed for 1 second.");
+          }, 0)
           audio.play();
           scoreElement.innerText = hardMode ? `H ${score}` : score;
 
